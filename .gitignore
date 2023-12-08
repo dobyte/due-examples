@@ -15,4 +15,5 @@ docker/*/
 go.work
 go.work.sum
 
-*run/*
+# Process ID
+*.pid
