@@ -9,7 +9,10 @@ import (
 	"github.com/dobyte/due/v2/cluster/node"
 	"github.com/dobyte/due/v2/codes"
 	"github.com/dobyte/due/v2/log"
+	"github.com/dobyte/due/v2/utils/xtime"
 )
+
+const greet = 1
 
 func main() {
 	// 创建容器
@@ -20,22 +23,27 @@ func main() {
 	registry := consul.NewRegistry()
 	// 创建RPC传输器
 	transporter := rpcx.NewTransporter()
-	// 创建网关组件
+	// 创建节点组件
 	component := node.NewNode(
 		node.WithLocator(locator),
 		node.WithRegistry(registry),
 		node.WithTransporter(transporter),
 	)
-	// 注册路由
-	component.Proxy().Router().AddRouteHandler(1, false, greetHandler)
-	// 添加网关组件
+	// 初始化监听
+	initListen(component.Proxy())
+	// 添加节点组件
 	container.Add(component)
 	// 启动容器
 	container.Serve()
 }
 
+// 初始化监听
+func initListen(proxy *node.Proxy) {
+	proxy.Router().AddRouteHandler(greet, false, greetHandler)
+}
+
 type greetReq struct {
-	Name string `json:"name"`
+	Message string `json:"message"`
 }
 
 type greetRes struct {
@@ -58,6 +66,8 @@ func greetHandler(ctx *node.Context) {
 		return
 	}
 
+	log.Info(req.Message)
+
 	res.Code = codes.OK.Code()
-	res.Message = fmt.Sprintf("hello %s~~", req.Name)
+	res.Message = fmt.Sprintf("I'm server, and the current time is: %s", xtime.Now().Format(xtime.DatetimeLayout))
 }
