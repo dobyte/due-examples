@@ -29,7 +29,7 @@ $ git clone https://github.com/dobyte/due-examples.git
 
 ### 5.启动docker
 ```shell
-$ cd /home/workspace/docker
+$ cd /home/workspace/due-examples/docker
 $ docker-compose up -d
 ```
 
