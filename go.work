@@ -1,0 +1,13 @@
+go 1.20
+
+use (
+	.
+	../due
+	../due/log/zap
+	../due/network/ws
+	../due/locate/redis
+	../due/registry/consul
+	../due/transport/rpcx
+	../due/eventbus/nats
+	../due/config/etcd
+)

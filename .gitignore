@@ -11,9 +11,5 @@ docker/*/
 .vscode
 .idea/
 
-# Go workspace
-go.work
-go.work.sum
-
 # Process ID
 *.pid
