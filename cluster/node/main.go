@@ -51,7 +51,7 @@ type greetRes struct {
 	Message string `json:"message"`
 }
 
-func greetHandler(ctx *node.Context) {
+func greetHandler(ctx node.Context) {
 	req := &greetReq{}
 	res := &greetRes{}
 	defer func() {
@@ -60,7 +60,7 @@ func greetHandler(ctx *node.Context) {
 		}
 	}()
 
-	if err := ctx.Request.Parse(req); err != nil {
+	if err := ctx.Parse(req); err != nil {
 		log.Errorf("parse request message failed: %v", err)
 		res.Code = codes.InternalError.Code()
 		return
