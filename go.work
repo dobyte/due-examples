@@ -5,6 +5,7 @@ use (
 	../due
 	../due/log/zap
 	../due/network/ws
+	../due/network/tcp
 	../due/locate/redis
 	../due/registry/consul
 	../due/transport/rpcx
