@@ -2,13 +2,16 @@ go 1.20
 
 use (
 	.
-	../due
-	../due/log/zap
-	../due/network/ws
-	../due/network/tcp
-	../due/locate/redis
-	../due/registry/consul
-	../due/transport/rpcx
-	../due/eventbus/nats
-	../due/config/etcd
+	../duplicate/due
+	../duplicate/due/log/zap
+	../duplicate/due/network/ws
+	../duplicate/due/network/tcp
+	../duplicate/due/locate/redis
+	../duplicate/due/registry/consul
+	../duplicate/due/registry/etcd
+	../duplicate/due/transport/rpcx
+	../duplicate/due/eventbus/nats
+	../duplicate/due/config/etcd
+	../duplicate/due/crypto/ecc
+	../duplicate/due/crypto/rsa
 )
