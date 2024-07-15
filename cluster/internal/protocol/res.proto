@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option go_package = "due-examples/cluster/internal/protocol/common";
+
+package common;
+
+message Res {
+  int32 Code = 1; // 错误码
+}
