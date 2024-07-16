@@ -1,6 +1,8 @@
 package codes
 
-import "github.com/dobyte/due/v2/codes"
+import (
+	"github.com/dobyte/due/v2/codes"
+)
 
 var (
 	OK                         = codes.OK
