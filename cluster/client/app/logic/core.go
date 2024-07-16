@@ -74,7 +74,6 @@ func (c *core) registerHandler(ctx *client.Context) {
 		c.pushLoginMessage(ctx)
 	default:
 		log.Errorf("node response failed, code: %d", res.Code)
-
 	}
 }
 

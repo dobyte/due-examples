@@ -3,17 +3,14 @@ package user
 import (
 	"context"
 	"due-examples/cluster/internal/codes"
-	"due-examples/cluster/internal/service/rpcx/user/pb"
+	"due-examples/cluster/internal/service/grpc/user/pb"
 	"github.com/dobyte/due/v2/cluster/mesh"
 	"github.com/dobyte/due/v2/errors"
 	"sync"
 	"sync/atomic"
 )
 
-const (
-	service     = "user" // 用于客户端定位服务，例如discovery://user
-	servicePath = "User" // 服务路径要与pb中的服务路径保持一致
-)
+const service = "user"
 
 type user struct {
 	id       int64  // ID
@@ -23,6 +20,7 @@ type user struct {
 }
 
 type Server struct {
+	pb.UnimplementedUserServer
 	proxy    *mesh.Proxy
 	uid      int64
 	rw       sync.RWMutex
@@ -30,7 +28,7 @@ type Server struct {
 	accounts map[string]*user
 }
 
-var _ pb.UserAble = &Server{}
+var _ pb.UserServer = &Server{}
 
 func NewServer(proxy *mesh.Proxy) *Server {
 	return &Server{
@@ -41,23 +39,23 @@ func NewServer(proxy *mesh.Proxy) *Server {
 }
 
 func (s *Server) Init() {
-	s.proxy.AddServiceProvider(service, servicePath, s)
+	s.proxy.AddServiceProvider(service, &pb.User_ServiceDesc, s)
 }
 
 // Register 注册账号
-func (s *Server) Register(ctx context.Context, req *pb.RegisterRequest, reply *pb.RegisterReply) error {
+func (s *Server) Register(ctx context.Context, req *pb.RegisterRequest) (*pb.RegisterReply, error) {
 	s.rw.RLock()
 	_, ok := s.accounts[req.Account]
 	s.rw.RUnlock()
 	if ok {
-		return errors.NewError(codes.AccountExists)
+		return nil, errors.NewError(codes.AccountExists)
 	}
 
 	s.rw.Lock()
 	defer s.rw.Unlock()
 
 	if _, ok = s.accounts[req.Account]; ok {
-		return errors.NewError(codes.AccountExists)
+		return nil, errors.NewError(codes.AccountExists)
 	}
 
 	uu := &user{
@@ -70,40 +68,38 @@ func (s *Server) Register(ctx context.Context, req *pb.RegisterRequest, reply *p
 	s.users[uu.id] = uu
 	s.accounts[req.Account] = uu
 
-	return nil
+	return nil, nil
 }
 
 // Login 登录账号
-func (s *Server) Login(ctx context.Context, req *pb.LoginRequest, reply *pb.LoginReply) error {
+func (s *Server) Login(ctx context.Context, req *pb.LoginRequest) (*pb.LoginReply, error) {
 	s.rw.RLock()
 	uu, ok := s.accounts[req.Account]
 	s.rw.RUnlock()
 
 	if !ok {
-		return errors.NewError(codes.AccountNotExists)
+		return nil, errors.NewError(codes.AccountNotExists)
 	}
 
 	if uu.password != req.Password {
-		return errors.NewError(codes.IncorrectAccountOrPassword)
+		return nil, errors.NewError(codes.IncorrectAccountOrPassword)
 	}
 
-	reply.UID = uu.id
-
-	return nil
+	return &pb.LoginReply{UID: uu.id}, nil
 }
 
 // FetchProfile 拉取资料
-func (s *Server) FetchProfile(ctx context.Context, req *pb.FetchProfileRequest, reply *pb.FetchProfileReply) error {
+func (s *Server) FetchProfile(ctx context.Context, req *pb.FetchProfileRequest) (*pb.FetchProfileReply, error) {
 	s.rw.RLock()
 	uu, ok := s.users[req.UID]
 	s.rw.RUnlock()
 
 	if !ok {
-		return errors.NewError(codes.AccountNotExists)
+		return nil, errors.NewError(codes.AccountNotExists)
 	}
 
-	reply.Account = uu.account
-	reply.Nickname = uu.nickname
-
-	return nil
+	return &pb.FetchProfileReply{
+		Account:  uu.account,
+		Nickname: uu.nickname,
+	}, nil
 }

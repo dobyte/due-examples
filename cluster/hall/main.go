@@ -4,7 +4,7 @@ import (
 	"due-examples/cluster/hall/app"
 	"github.com/dobyte/due/locate/redis/v2"
 	"github.com/dobyte/due/registry/consul/v2"
-	"github.com/dobyte/due/transport/rpcx/v2"
+	"github.com/dobyte/due/transport/grpc/v2"
 	"github.com/dobyte/due/v2"
 	"github.com/dobyte/due/v2/cluster/node"
 )
@@ -17,7 +17,8 @@ func main() {
 	// 创建服务发现
 	registry := consul.NewRegistry()
 	// 创建RPC传输器
-	transporter := rpcx.NewTransporter()
+	//transporter := rpcx.NewTransporter()
+	transporter := grpc.NewTransporter()
 	// 创建节点组件
 	component := node.NewNode(
 		node.WithLocator(locator),

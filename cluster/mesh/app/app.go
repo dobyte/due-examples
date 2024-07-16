@@ -1,7 +1,7 @@
 package app
 
 import (
-	"due-examples/cluster/internal/service/rpcx/user"
+	"due-examples/cluster/internal/service/grpc/user"
 	"github.com/dobyte/due/v2/cluster/mesh"
 )
 

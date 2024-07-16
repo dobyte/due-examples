@@ -1,4 +1,4 @@
-go 1.20
+go 1.21
 
 use (
 	.
@@ -9,6 +9,7 @@ use (
 	../duplicate/due/locate/redis
 	../duplicate/due/registry/consul
 	../duplicate/due/registry/etcd
+	../duplicate/due/transport/grpc
 	../duplicate/due/transport/rpcx
 	../duplicate/due/eventbus/nats
 	../duplicate/due/config/etcd
