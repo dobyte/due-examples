@@ -15,4 +15,5 @@ use (
 	../duplicate/due/config/etcd
 	../duplicate/due/crypto/ecc
 	../duplicate/due/crypto/rsa
+	../duplicate/due/component/http
 )
