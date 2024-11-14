@@ -1,0 +1,69 @@
+# 进程号
+pid = "./run/node.pid"
+# 开发模式。支持模式：debug、test、release（模式优先级：环境变量 < 配置文件 < 运行参数）
+mode = "debug"
+# 统一时区设置。项目中的时间获取请使用xtime.Now()
+timezone = "Local"
+
+# http服务器配置
+[http]
+    # 服务器名称
+    name = "http"
+    # 服务器监听地址，默认为:8080
+    addr = ":8080"
+    # 秘钥文件
+    keyFile = ""
+    # 证书文件
+    certFile = ""
+    # 跨域配置
+    [http.cors]
+        # 是否启用跨域
+        enable = true
+        # 允许跨域的请求源。默认为[]，即为允许所有请求源
+        allowOrigins = []
+        # 允许跨域的请求方法。默认为["GET", "POST", "HEAD", "PUT", "DELETE", "PATCH"]
+        allowMethods = []
+        # 允许跨域的请求头部。默认为[]，即为允许所有请求头部
+        allowHeaders = []
+        # 当允许所有源时，根据CORS规范不允许携带凭据。默认为false
+        allowCredentials = false
+        # 允许暴露给客户端的头部。默认为[]，即为允许暴露所有头部
+        exposeHeaders = []
+        # 浏览器缓存预检请求结果的时间。默认为0
+        maxAge = 0
+        # 是否允许来自私有网络的请求。设置为true时，响应头Access-Control-Allow-Private-Network会被设置为true。默认为false
+        allowPrivateNetwork = false
+    # swagger配置
+    [http.swagger]
+        # 是否启用文档
+        enable = true
+        # API文档标题
+        title = "API文档"
+        # URL访问基础路径
+        basePath = "/swagger"
+        # swagger文件路径
+        filePath = "./docs/swagger.json"
+
+[log]
+    # 日志输出文件
+    file = "./log/due.log"
+    # 日志输出级别，可选：debug | info | warn | error | fatal | panic
+    level = "debug"
+    # 日志输出格式，可选：text | json
+    format = "text"
+    # 是否输出到终端
+    stdout = true
+    # 时间格式，标准库时间格式
+    timeFormat = "2006/01/02 15:04:05.000000"
+    # 堆栈的最低输出级别，可选：debug | info | warn | error | fatal | panic
+    stackLevel = "error"
+    # 文件最大留存时间，d:天、h:时、m:分、s:秒
+    fileMaxAge = "7d"
+    # 文件最大尺寸限制，单位（MB）
+    fileMaxSize = 100
+    # 文件切割方式
+    fileCutRule = "day"
+    # 是否启用调用文件全路径
+    callerFullPath = true
+    # 是否启用分级存储
+    classifiedStorage = false
