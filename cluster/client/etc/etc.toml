@@ -1,12 +1,26 @@
-[cluster]
-    # 集群客户端配置，常用于调试使用
-    [cluster.client]
-        # 实例ID，网关集群中唯一。不填写默认自动生成唯一的实例ID
-        id = ""
-        # 实例名称
-        name = "client"
-        # 编解码器。可选：json | proto
-        codec = "proto"
+# 进程号
+pid = "./run/client.pid"
+# 开发模式。支持模式：debug、test、release（模式优先级：环境变量 < 配置文件 < 运行参数）
+mode = "debug"
+# 统一时区设置。项目中的时间获取请使用xtime.Now()
+timezone = "Local"
+
+# 集群客户端配置，常用于调试使用
+[cluster.client]
+    # 实例ID，网关集群中唯一。不填写默认自动生成唯一的实例ID
+    id = ""
+    # 实例名称
+    name = "client"
+    # 编解码器。可选：json | proto
+    codec = "json"
+
+[network.ws.client]
+    # 拨号地址
+    url = "ws://127.0.0.1:3553"
+    # 握手超时时间，支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为10s
+    handshakeTimeout = "10s"
+    # 心跳间隔时间。设置为0则不启用心跳检测，支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为10s
+    heartbeatInterval = "10s"
 
 [packet]
     # 字节序，默认为big。可选：little | big
@@ -41,13 +55,3 @@
     callerFullPath = false
     # 是否启用分级存储
     classifiedStorage = false
-
-[network]
-    [network.ws]
-        [network.ws.client]
-            # 拨号地址
-            url = "ws://127.0.0.1:3553"
-            # 握手超时时间，支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为10s
-            handshakeTimeout = "10s"
-            # 心跳间隔时间。设置为0则不启用心跳检测，支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为10s
-            heartbeatInterval = "10s"
