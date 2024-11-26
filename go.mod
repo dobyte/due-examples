@@ -5,14 +5,15 @@ go 1.22.0
 toolchain go1.22.9
 
 require (
-	github.com/dobyte/due/component/http/v2 v2.0.0-20241114093539-a28580e7f5e7
-	github.com/dobyte/due/config/consul/v2 v2.0.0-20241114093539-a28580e7f5e7
-	github.com/dobyte/due/config/etcd/v2 v2.0.0-20241114093539-a28580e7f5e7
-	github.com/dobyte/due/locate/redis/v2 v2.0.0-20241114093539-a28580e7f5e7
-	github.com/dobyte/due/network/ws/v2 v2.0.0-20241114093539-a28580e7f5e7
-	github.com/dobyte/due/registry/consul/v2 v2.0.0-20241114093539-a28580e7f5e7
-	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20241114093539-a28580e7f5e7
-	github.com/dobyte/due/v2 v2.2.2
+	github.com/dobyte/due/component/http/v2 v2.0.0-20241120064645-44dd1c6a3d7c
+	github.com/dobyte/due/config/consul/v2 v2.0.0-20241120064645-44dd1c6a3d7c
+	github.com/dobyte/due/config/etcd/v2 v2.0.0-20241120064645-44dd1c6a3d7c
+	github.com/dobyte/due/locate/redis/v2 v2.0.0-20241120064645-44dd1c6a3d7c
+	github.com/dobyte/due/network/ws/v2 v2.0.0-20241120064645-44dd1c6a3d7c
+	github.com/dobyte/due/registry/consul/v2 v2.0.0-20241120064645-44dd1c6a3d7c
+	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20241120064645-44dd1c6a3d7c
+	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20241120064645-44dd1c6a3d7c
+	github.com/dobyte/due/v2 v2.2.3
 	github.com/golang/protobuf v1.5.4
 	github.com/smallnest/rpcx v1.8.32
 	google.golang.org/grpc v1.67.1
