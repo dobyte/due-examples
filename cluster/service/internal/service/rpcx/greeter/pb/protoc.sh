@@ -1,2 +1,2 @@
 #!/bin/bash
-protoc --gofast_out=.. --rpcx_out=.. *.proto
+protoc --go_out=.. --rpcx_out=.. *.proto

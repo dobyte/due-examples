@@ -26,16 +26,16 @@ func main() {
 		node.WithLocator(locator),
 		node.WithRegistry(registry),
 	)
-	// 初始化监听
-	initListen(component.Proxy())
+	// 初始化应用
+	initApp(component.Proxy())
 	// 添加节点组件
 	container.Add(component)
 	// 启动容器
 	container.Serve()
 }
 
-// 初始化监听
-func initListen(proxy *node.Proxy) {
+// 初始化应用
+func initApp(proxy *node.Proxy) {
 	proxy.Router().AddRouteHandler(greet, false, greetHandler)
 }
 

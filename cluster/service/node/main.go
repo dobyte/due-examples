@@ -79,7 +79,7 @@ func helloHandler(ctx node.Context) {
 
 	reply, err := cli.Hello(ctx.Context(), &pb.HelloArgs{Name: req.Name})
 	if err != nil {
-		log.Errorf("create rpc client failed: %v", err)
+		log.Errorf("invoke rpc func failed: %v", err)
 		res.Code = codes.Convert(err).Code()
 		return
 	}

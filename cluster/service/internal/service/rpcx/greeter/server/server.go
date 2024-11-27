@@ -27,7 +27,6 @@ func (s *Server) Init() {
 	s.proxy.AddServiceProvider(service, servicePath, s)
 }
 
-// Hello is server rpc method as defined
 func (s *Server) Hello(ctx context.Context, args *pb.HelloArgs, reply *pb.HelloReply) (err error) {
 	reply.Message = "Hello " + args.Name
 	return

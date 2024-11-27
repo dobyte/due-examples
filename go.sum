@@ -79,6 +79,8 @@ github.com/dobyte/due/registry/etcd/v2 v2.0.0-20241120064645-44dd1c6a3d7c h1:m2n
 github.com/dobyte/due/registry/etcd/v2 v2.0.0-20241120064645-44dd1c6a3d7c/go.mod h1:xV4skiHvXt78G3VF1aJJONY78416HVuLbKq/4x2KAhU=
 github.com/dobyte/due/transport/grpc/v2 v2.0.0-20241120064645-44dd1c6a3d7c h1:6jGbp9CmEzQ0jlw9uujlzpwZBzXm9UN9TRpL5knIJHk=
 github.com/dobyte/due/transport/grpc/v2 v2.0.0-20241120064645-44dd1c6a3d7c/go.mod h1:J1VFaACcVqxa7cO6WVbOWTHUeK/nevfCCILOrRvpysE=
+github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20241120064645-44dd1c6a3d7c h1:OAf2Qk6XthjvHV1sR5b00QU4jNH8XUXPQpX5xuE2+b8=
+github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20241120064645-44dd1c6a3d7c/go.mod h1:SsR1ylVIHbfkqV1OfzDqET9T7bchSL601saN6ih8kKE=
 github.com/dobyte/due/v2 v2.2.3 h1:ZUbjf5ShPZwk2qzrSGM10yum3DiwYv6YttNZ31nxzfc=
 github.com/dobyte/due/v2 v2.2.3/go.mod h1:tf0jdt8VDJldaesOj1tPw7OB3jUes9+OXMqJJXJ7IOw=
 github.com/edwingeng/doublejump v1.0.1 h1:wJ6QgNyyF23Of9vw+ThbwJ/obe9KdxaWEg/Brpv5S1o=

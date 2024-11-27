@@ -18,16 +18,16 @@ func main() {
 	container := due.NewContainer()
 	// 创建HTTP组件
 	component := http.NewServer()
-	// 初始化监听
-	initListen(component.Proxy())
+	// 初始化应用
+	initApp(component.Proxy())
 	// 添加网格组件
 	container.Add(component)
 	// 启动容器
 	container.Serve()
 }
 
-// 初始化监听
-func initListen(proxy *http.Proxy) {
+// 初始化应用
+func initApp(proxy *http.Proxy) {
 	// 路由器
 	router := proxy.Router()
 	// 注册路由
