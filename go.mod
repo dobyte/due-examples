@@ -1,20 +1,21 @@
 module due-examples
 
-go 1.22.0
+go 1.22.9
 
-toolchain go1.22.9
+toolchain go1.22.10
 
 require (
 	github.com/dobyte/due/component/http/v2 v2.0.0-20241120064645-44dd1c6a3d7c
 	github.com/dobyte/due/config/consul/v2 v2.0.0-20241120064645-44dd1c6a3d7c
 	github.com/dobyte/due/config/etcd/v2 v2.0.0-20241120064645-44dd1c6a3d7c
 	github.com/dobyte/due/locate/redis/v2 v2.0.0-20241120064645-44dd1c6a3d7c
-	github.com/dobyte/due/network/ws/v2 v2.0.0-20241120064645-44dd1c6a3d7c
+	github.com/dobyte/due/network/tcp/v2 v2.0.0-20250405021511-1a28ea260409
+	github.com/dobyte/due/network/ws/v2 v2.0.0-20250405021511-1a28ea260409
 	github.com/dobyte/due/registry/consul/v2 v2.0.0-20241120064645-44dd1c6a3d7c
 	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20241120064645-44dd1c6a3d7c
 	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20241120064645-44dd1c6a3d7c
-	github.com/dobyte/due/v2 v2.2.3
-	github.com/golang/protobuf v1.5.4
+	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20241120064645-44dd1c6a3d7c
+	github.com/dobyte/due/v2 v2.2.4
 	github.com/smallnest/rpcx v1.8.32
 	google.golang.org/grpc v1.67.1
 	google.golang.org/protobuf v1.35.1
@@ -29,22 +30,20 @@ require (
 	github.com/apache/thrift v0.20.0 // indirect
 	github.com/armon/go-metrics v0.4.1 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
-	github.com/bytedance/sonic v1.12.3 // indirect
-	github.com/bytedance/sonic/loader v0.2.0 // indirect
+	github.com/bytedance/sonic v1.12.8 // indirect
+	github.com/bytedance/sonic/loader v0.2.2 // indirect
 	github.com/cenk/backoff v2.2.1+incompatible // indirect
 	github.com/cenkalti/backoff v2.2.1+incompatible // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/cloudwego/base64x v0.1.4 // indirect
-	github.com/cloudwego/iasm v0.2.0 // indirect
+	github.com/cloudwego/base64x v0.1.5 // indirect
 	github.com/coreos/go-semver v0.3.1 // indirect
 	github.com/coreos/go-systemd/v22 v22.5.0 // indirect
 	github.com/dgryski/go-jump v0.0.0-20211018200510-ba001c3ffce0 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
-	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20241120064645-44dd1c6a3d7c // indirect
 	github.com/edwingeng/doublejump v1.0.1 // indirect
 	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a // indirect
 	github.com/fatih/color v1.17.0 // indirect
-	github.com/fsnotify/fsnotify v1.7.0 // indirect
+	github.com/fsnotify/fsnotify v1.8.0 // indirect
 	github.com/go-openapi/analysis v0.23.0 // indirect
 	github.com/go-openapi/errors v0.22.0 // indirect
 	github.com/go-openapi/jsonpointer v0.21.0 // indirect
@@ -62,6 +61,7 @@ require (
 	github.com/gofiber/fiber/v3 v3.0.0-beta.3 // indirect
 	github.com/gofiber/utils/v2 v2.0.0-beta.6 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/pprof v0.0.0-20240727154555-813a5fbdbec8 // indirect
 	github.com/google/uuid v1.6.0 // indirect
@@ -129,8 +129,8 @@ require (
 	golang.org/x/exp v0.0.0-20241009180824-f66d83c29e7c // indirect
 	golang.org/x/mod v0.21.0 // indirect
 	golang.org/x/net v0.30.0 // indirect
-	golang.org/x/sync v0.8.0 // indirect
-	golang.org/x/sys v0.26.0 // indirect
+	golang.org/x/sync v0.10.0 // indirect
+	golang.org/x/sys v0.28.0 // indirect
 	golang.org/x/text v0.19.0 // indirect
 	golang.org/x/tools v0.26.0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20241015192408-796eee8c2d53 // indirect
