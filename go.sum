@@ -154,6 +154,8 @@ github.com/dobyte/due/registry/consul/v2 v2.0.0-20250410150357-c046ba710a0b h1:z
 github.com/dobyte/due/registry/consul/v2 v2.0.0-20250410150357-c046ba710a0b/go.mod h1:wWXv4Ltx2NgcX3k2HEySrVwLiaawVTpg3fMCrR3Dd/s=
 github.com/dobyte/due/registry/etcd/v2 v2.0.0-20250410150357-c046ba710a0b h1:Tb0jLUUSn3DxkfofAe922dcHKp/HHSSi+JRcRU8y/N4=
 github.com/dobyte/due/registry/etcd/v2 v2.0.0-20250410150357-c046ba710a0b/go.mod h1:YV5OQm39fLmpD7S/jOQo85TMscZOrVpDdSJB5us+oO8=
+github.com/dobyte/due/registry/nacos/v2 v2.0.0-20250414083402-2cf58d96460a h1:DFH5tT9E0DaD95Siq3OXy2dZDyEvHWwO60iAhTjF7OY=
+github.com/dobyte/due/registry/nacos/v2 v2.0.0-20250414083402-2cf58d96460a/go.mod h1:FemVgNzYiy1ROVFK5Zv8hhj0RiQHnDZRAqoIIU/5CXs=
 github.com/dobyte/due/transport/grpc/v2 v2.0.0-20250410150357-c046ba710a0b h1:tH1FLf6v03MOD6OfrA23ddmab3u2nLa50QbFmeZ7yOE=
 github.com/dobyte/due/transport/grpc/v2 v2.0.0-20250410150357-c046ba710a0b/go.mod h1:EAjPLVmAg6KrEhDASMGAN6kf4bgsRBMXzTzy4v3LLMs=
 github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20250410150357-c046ba710a0b h1:mcYCRuGp31UtgZt20/9TMEGcZjV/Sq/I3nE5R/vAlGw=
