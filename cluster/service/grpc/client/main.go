@@ -20,7 +20,7 @@ func main() {
 		client.WithClient(ws.NewClient()),
 	)
 	// 初始化应用
-	initApp(component.Proxy())
+	initAPP(component.Proxy())
 	// 添加客户端组件
 	container.Add(component)
 	// 启动容器
@@ -28,7 +28,7 @@ func main() {
 }
 
 // 初始化应用
-func initApp(proxy *client.Proxy) {
+func initAPP(proxy *client.Proxy) {
 	// 监听组件启动
 	proxy.AddHookListener(cluster.Start, startHandler)
 	// 监听连接建立

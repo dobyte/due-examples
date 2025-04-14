@@ -25,7 +25,7 @@ func main() {
 		mesh.WithTransporter(transporter),
 	)
 	// 初始化应用
-	initGRPCServer(component.Proxy())
+	initAPP(component.Proxy())
 	// 添加网格组件
 	container.Add(component)
 	// 启动容器
@@ -33,6 +33,6 @@ func main() {
 }
 
 // 初始化应用
-func initGRPCServer(proxy *mesh.Proxy) {
+func initAPP(proxy *mesh.Proxy) {
 	server.NewServer(proxy).Init()
 }
