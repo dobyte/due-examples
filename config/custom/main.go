@@ -2,19 +2,19 @@ package main
 
 import (
 	"context"
+	"due-examples/config/custom/zookeeper"
 	"github.com/dobyte/due/v2/config"
-	"github.com/dobyte/due/v2/config/file"
 	"github.com/dobyte/due/v2/log"
 )
 
 const filename = "config.toml"
 
 func main() {
-	// 设置文件配置中心
-	config.SetConfigurator(config.NewConfigurator(config.WithSources(file.NewSource())))
+	// 设置zookeeper配置源
+	config.SetConfigurator(config.NewConfigurator(config.WithSources(zookeeper.NewSource())))
 
 	// 更新配置
-	if err := config.Store(context.Background(), file.Name, filename, map[string]interface{}{
+	if err := config.Store(context.Background(), zookeeper.Name, filename, map[string]interface{}{
 		"timezone": "Local",
 	}); err != nil {
 		log.Errorf("store config failed: %v", err)
@@ -26,7 +26,7 @@ func main() {
 	log.Infof("timezone: %s", timezone)
 
 	// 更新配置
-	if err := config.Store(context.Background(), file.Name, filename, map[string]interface{}{
+	if err := config.Store(context.Background(), zookeeper.Name, filename, map[string]interface{}{
 		"timezone": "UTC",
 	}); err != nil {
 		log.Errorf("store config failed: %v", err)

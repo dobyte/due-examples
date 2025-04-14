@@ -13,7 +13,7 @@ import (
 func main() {
 	var (
 		reg   = consul.NewRegistry()
-		id, _ = xuuid.UUID()
+		id    = xuuid.UUID()
 		name  = "game-server"
 		alias = "mahjong"
 		ins   = &registry.ServiceInstance{

@@ -88,7 +88,7 @@ func pushMessage(conn *client.Conn) {
 	err := conn.Push(&cluster.Message{
 		Route: 1,
 		Data: &greetReq{
-			Message: fmt.Sprintf("I'm client, and the current time is: %s", xtime.Now().Format(xtime.DateTime)),
+			Message: fmt.Sprintf("I'm tcp client, and the current time is: %s", xtime.Now().Format(xtime.DateTime)),
 		},
 	})
 	if err != nil {

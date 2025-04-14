@@ -69,5 +69,5 @@ func greetHandler(ctx node.Context) {
 	log.Info(req.Message)
 
 	res.Code = codes.OK.Code()
-	res.Message = fmt.Sprintf("I'm server, and the current time is: %s", xtime.Now().Format(xtime.DateTime))
+	res.Message = fmt.Sprintf("I'm tcp server, and the current time is: %s", xtime.Now().Format(xtime.DateTime))
 }
