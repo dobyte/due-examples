@@ -31,7 +31,14 @@ func initApp(proxy *http.Proxy) {
 	// 路由器
 	router := proxy.Router()
 	// 注册路由
-	router.Get("/greet", greetHandler)
+	router.Get("/greet", greetHandler, authMiddleware)
+}
+
+// 授权中间件
+func authMiddleware(ctx http.Context) error {
+	// TODO: do something
+
+	return ctx.Next()
 }
 
 // 请求
