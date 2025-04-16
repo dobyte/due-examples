@@ -1,19 +1,20 @@
 module due-examples
 
-go 1.23.5
+go 1.23.0
 
 require (
-	github.com/dobyte/due/component/http/v2 v2.0.0-20250410150357-c046ba710a0b
-	github.com/dobyte/due/config/consul/v2 v2.0.0-20250410150357-c046ba710a0b
-	github.com/dobyte/due/config/etcd/v2 v2.0.0-20250410150357-c046ba710a0b
-	github.com/dobyte/due/config/nacos/v2 v2.0.0-20250410150357-c046ba710a0b
-	github.com/dobyte/due/locate/redis/v2 v2.0.0-20250410150357-c046ba710a0b
-	github.com/dobyte/due/network/tcp/v2 v2.0.0-20250410150357-c046ba710a0b
-	github.com/dobyte/due/network/ws/v2 v2.0.0-20250410150357-c046ba710a0b
-	github.com/dobyte/due/registry/consul/v2 v2.0.0-20250410150357-c046ba710a0b
-	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20250410150357-c046ba710a0b
-	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20250410150357-c046ba710a0b
-	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20250410150357-c046ba710a0b
+	github.com/dobyte/due/component/http/v2 v2.0.0-20250416065620-22f9ba2fae0a
+	github.com/dobyte/due/config/consul/v2 v2.0.0-20250414104025-1c4449437a6a
+	github.com/dobyte/due/config/etcd/v2 v2.0.0-20250414104025-1c4449437a6a
+	github.com/dobyte/due/config/nacos/v2 v2.0.0-20250414104025-1c4449437a6a
+	github.com/dobyte/due/locate/redis/v2 v2.0.0-20250414104025-1c4449437a6a
+	github.com/dobyte/due/network/tcp/v2 v2.0.0-20250414104025-1c4449437a6a
+	github.com/dobyte/due/network/ws/v2 v2.0.0-20250416065620-22f9ba2fae0a
+	github.com/dobyte/due/registry/consul/v2 v2.0.0-20250414104025-1c4449437a6a
+	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20250414104025-1c4449437a6a
+	github.com/dobyte/due/registry/nacos/v2 v2.0.0-20250414083402-2cf58d96460a
+	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20250414104025-1c4449437a6a
+	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20250414104025-1c4449437a6a
 	github.com/dobyte/due/v2 v2.2.5
 	github.com/smallnest/rpcx v1.9.1
 	google.golang.org/grpc v1.71.1
@@ -62,7 +63,6 @@ require (
 	github.com/deckarep/golang-set v1.8.0 // indirect
 	github.com/dgryski/go-jump v0.0.0-20211018200510-ba001c3ffce0 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
-	github.com/dobyte/due/registry/nacos/v2 v2.0.0-20250414083402-2cf58d96460a // indirect
 	github.com/edwingeng/doublejump v1.0.1 // indirect
 	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a // indirect
 	github.com/fatih/color v1.18.0 // indirect
