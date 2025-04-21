@@ -3,19 +3,19 @@ module due-examples
 go 1.23.0
 
 require (
-	github.com/dobyte/due/component/http/v2 v2.0.0-20250416065620-22f9ba2fae0a
-	github.com/dobyte/due/config/consul/v2 v2.0.0-20250414104025-1c4449437a6a
-	github.com/dobyte/due/config/etcd/v2 v2.0.0-20250414104025-1c4449437a6a
-	github.com/dobyte/due/config/nacos/v2 v2.0.0-20250414104025-1c4449437a6a
-	github.com/dobyte/due/locate/redis/v2 v2.0.0-20250414104025-1c4449437a6a
-	github.com/dobyte/due/network/tcp/v2 v2.0.0-20250414104025-1c4449437a6a
-	github.com/dobyte/due/network/ws/v2 v2.0.0-20250416065620-22f9ba2fae0a
-	github.com/dobyte/due/registry/consul/v2 v2.0.0-20250414104025-1c4449437a6a
-	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20250414104025-1c4449437a6a
-	github.com/dobyte/due/registry/nacos/v2 v2.0.0-20250414083402-2cf58d96460a
-	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20250414104025-1c4449437a6a
-	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20250414104025-1c4449437a6a
-	github.com/dobyte/due/v2 v2.2.5
+	github.com/dobyte/due/component/http/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/config/consul/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/config/etcd/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/config/nacos/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/locate/redis/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/network/tcp/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/network/ws/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/registry/consul/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/registry/nacos/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/v2 v2.2.6
 	github.com/smallnest/rpcx v1.9.1
 	google.golang.org/grpc v1.71.1
 	google.golang.org/protobuf v1.36.6
@@ -140,7 +140,7 @@ require (
 	github.com/quic-go/quic-go v0.50.1 // indirect
 	github.com/rs/cors v1.11.1 // indirect
 	github.com/rubyist/circuitbreaker v2.2.1+incompatible // indirect
-	github.com/shamaton/msgpack/v2 v2.2.2 // indirect
+	github.com/shamaton/msgpack/v2 v2.2.3 // indirect
 	github.com/smallnest/quick v0.2.0 // indirect
 	github.com/smallnest/rsocket v0.0.0-20241130031020-4a72eb6ff62a // indirect
 	github.com/soheilhy/cmux v0.1.5 // indirect
