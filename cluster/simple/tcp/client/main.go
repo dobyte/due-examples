@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
+	"time"
+
 	"github.com/dobyte/due/network/tcp/v2"
 	"github.com/dobyte/due/v2"
 	"github.com/dobyte/due/v2/cluster"
 	"github.com/dobyte/due/v2/cluster/client"
 	"github.com/dobyte/due/v2/log"
 	"github.com/dobyte/due/v2/utils/xtime"
-	"time"
 )
 
 // 路由号
@@ -22,14 +23,14 @@ func main() {
 		client.WithClient(tcp.NewClient()),
 	)
 	// 初始化监听
-	initListen(component.Proxy())
+	initApp(component.Proxy())
 	// 添加客户端组件
 	container.Add(component)
 	// 启动容器
 	container.Serve()
 }
 
-func initListen(proxy *client.Proxy) {
+func initApp(proxy *client.Proxy) {
 	// 监听组件启动
 	proxy.AddHookListener(cluster.Start, startHandler)
 	// 监听连接建立

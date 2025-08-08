@@ -11,5 +11,8 @@ docker/*/
 .vscode
 .idea/
 
-# project run dir
+# Project run dir
 *run/
+
+# Executable file
+*.exe

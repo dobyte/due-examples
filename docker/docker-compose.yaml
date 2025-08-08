@@ -16,7 +16,7 @@ services:
     networks:
       - middleware
   redis:
-    image: redis:6.0
+    image: redis:6.2.18
     container_name: dev-redis
     platform: linux/x86_64
     restart: always
@@ -80,7 +80,7 @@ services:
     ports:
       - '11211:11211'
   nacos:
-    image: nacos/nacos-server:latest
+    image: nacos/nacos-server:2.3.2
     container_name: dev-nacos
     platform: linux/x86_64
     restart: always

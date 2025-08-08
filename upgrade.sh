@@ -10,3 +10,5 @@ do
     go get "${arr[0]}@latest"
   fi
 done < go.mod
+
+go mod tidy

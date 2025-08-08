@@ -1,0 +1,57 @@
+# 进程号
+pid = "./run/client.pid"
+# 开发模式。支持模式：debug、test、release（模式优先级：环境变量 < 配置文件 < 运行参数）
+mode = "debug"
+# 统一时区设置。项目中的时间获取请使用xtime.Now()
+timezone = "Local"
+
+# 集群客户端配置，常用于调试使用
+[cluster.client]
+    # 实例ID，网关集群中唯一。不填写默认自动生成唯一的实例ID
+    id = ""
+    # 实例名称
+    name = "client"
+    # 编解码器。可选：json | proto
+    codec = "json"
+
+[network.ws.client]
+    # 拨号地址
+    url = "ws://127.0.0.1:3553"
+    # 握手超时时间，支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为10s
+    handshakeTimeout = "10s"
+    # 心跳间隔时间。设置为0则不启用心跳检测，支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为10s
+    heartbeatInterval = "10s"
+
+[packet]
+    # 字节序，默认为big。可选：little | big
+    byteOrder = "big"
+    # 路由字节数，默认为2字节
+    routeBytes = 4
+    # 序列号字节数，默认为2字节
+    seqBytes = 0
+    # 消息字节数，默认为5000字节
+    bufferBytes = 100000
+
+[log]
+    # 日志输出文件
+    file = "./log/due.log"
+    # 日志输出级别，可选：debug | info | warn | error | fatal | panic
+    level = "debug"
+    # 日志输出格式，可选：text | json
+    format = "text"
+    # 是否输出到终端
+    stdout = true
+    # 时间格式，标准库时间格式
+    timeFormat = "2006/01/02 15:04:05.000000"
+    # 堆栈的最低输出级别，可选：debug | info | warn | error | fatal | panic
+    stackLevel = "error"
+    # 文件最大留存时间，d:天、h:时、m:分、s:秒
+    fileMaxAge = "7d"
+    # 文件最大尺寸限制，单位（MB）
+    fileMaxSize = 100
+    # 文件切割方式
+    fileCutRule = "day"
+    # 是否启用调用文件全路径
+    callerFullPath = false
+    # 是否启用分级存储
+    classifiedStorage = false

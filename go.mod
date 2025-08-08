@@ -8,6 +8,8 @@ require (
 	github.com/dobyte/due/config/etcd/v2 v2.0.0-20250417030418-e72e9f488a6c
 	github.com/dobyte/due/config/nacos/v2 v2.0.0-20250417030418-e72e9f488a6c
 	github.com/dobyte/due/locate/redis/v2 v2.0.0-20250417030418-e72e9f488a6c
+	github.com/dobyte/due/lock/memcache/v2 v2.0.0-20250715105824-025d23fd0c6d
+	github.com/dobyte/due/lock/redis/v2 v2.0.0-20250715105824-025d23fd0c6d
 	github.com/dobyte/due/network/tcp/v2 v2.0.0-20250417030418-e72e9f488a6c
 	github.com/dobyte/due/network/ws/v2 v2.0.0-20250417030418-e72e9f488a6c
 	github.com/dobyte/due/registry/consul/v2 v2.0.0-20250417030418-e72e9f488a6c
@@ -19,6 +21,15 @@ require (
 	github.com/smallnest/rpcx v1.9.1
 	google.golang.org/grpc v1.71.1
 	google.golang.org/protobuf v1.36.6
+)
+
+replace (
+	github.com/dobyte/due/component/http/v2 => ../duplicate/due/component/http
+	github.com/dobyte/due/lock/memcache/v2 => ../duplicate/due/lock/memcache
+	github.com/dobyte/due/lock/redis/v2 => ../duplicate/due/lock/redis
+	github.com/dobyte/due/network/tcp/v2 => ../duplicate/due/network/tcp
+	github.com/dobyte/due/network/ws/v2 => ../duplicate/due/network/ws
+	github.com/dobyte/due/v2 => ../duplicate/due
 )
 
 require (
@@ -50,6 +61,7 @@ require (
 	github.com/armon/go-metrics v0.4.1 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
+	github.com/bradfitz/gomemcache v0.0.0-20250403215159-8d39553ac7cf // indirect
 	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/bytedance/sonic v1.13.2 // indirect
 	github.com/bytedance/sonic/loader v0.2.4 // indirect

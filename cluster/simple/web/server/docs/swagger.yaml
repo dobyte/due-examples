@@ -1,0 +1,56 @@
+basePath: /
+definitions:
+  http.Resp:
+    properties:
+      code:
+        description: 响应码
+        type: integer
+      data:
+        description: 响应数据
+      message:
+        description: 响应消息
+        type: string
+    type: object
+  main.greetReq:
+    properties:
+      message:
+        type: string
+    type: object
+  main.greetRes:
+    properties:
+      message:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  title: API文档
+  version: "1.0"
+paths:
+  /greet:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/main.greetReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/http.Resp'
+            - properties:
+                Data:
+                  $ref: '#/definitions/main.greetRes'
+              type: object
+      summary: 测试接口
+      tags:
+      - 测试
+swagger: "2.0"

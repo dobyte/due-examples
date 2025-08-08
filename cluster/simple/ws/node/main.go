@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/dobyte/due/locate/redis/v2"
-	"github.com/dobyte/due/registry/consul/v2"
+	"github.com/dobyte/due/registry/etcd/v2"
 	"github.com/dobyte/due/v2"
 	"github.com/dobyte/due/v2/cluster/node"
 	"github.com/dobyte/due/v2/codes"
@@ -20,7 +21,7 @@ func main() {
 	// 创建用户定位器
 	locator := redis.NewLocator()
 	// 创建服务发现
-	registry := consul.NewRegistry()
+	registry := etcd.NewRegistry()
 	// 创建节点组件
 	component := node.NewNode(
 		node.WithLocator(locator),
@@ -36,7 +37,15 @@ func main() {
 
 // 初始化应用
 func initApp(proxy *node.Proxy) {
-	proxy.Router().AddRouteHandler(greet, false, greetHandler)
+	proxy.Router().Group(func(group *node.RouterGroup) {
+		group.Middleware(Auth)
+
+		group.AddRouteHandler(greet, false, greetHandler)
+	})
+}
+
+func Auth(middleware *node.Middleware, ctx node.Context) {
+	middleware.Next(ctx)
 }
 
 // 请求
@@ -52,22 +61,24 @@ type greetRes struct {
 
 // 路由处理器
 func greetHandler(ctx node.Context) {
-	req := &greetReq{}
-	res := &greetRes{}
-	defer func() {
-		if err := ctx.Response(res); err != nil {
-			log.Errorf("response message failed: %v", err)
+	ctx.Task(func(ctx node.Context) {
+		req := &greetReq{}
+		res := &greetRes{}
+		defer func() {
+			if err := ctx.Response(res); err != nil {
+				log.Errorf("response message failed: %v", err)
+			}
+		}()
+
+		if err := ctx.Parse(req); err != nil {
+			log.Errorf("parse request message failed: %v", err)
+			res.Code = codes.InternalError.Code()
+			return
 		}
-	}()
 
-	if err := ctx.Parse(req); err != nil {
-		log.Errorf("parse request message failed: %v", err)
-		res.Code = codes.InternalError.Code()
-		return
-	}
+		log.Info(req.Message)
 
-	log.Info(req.Message)
-
-	res.Code = codes.OK.Code()
-	res.Message = fmt.Sprintf("I'm ws server, and the current time is: %s", xtime.Now().Format(xtime.DateTime))
+		res.Code = codes.OK.Code()
+		res.Message = fmt.Sprintf("I'm ws server, and the current time is: %s", xtime.Now().Format(xtime.DateTime))
+	})
 }

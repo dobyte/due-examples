@@ -1,6 +1,6 @@
 # 进程号
 pid = "./run/gate.pid"
-# 开发模式。支持模式：debug、test、release（设置优先级：配置文件 < 环境变量 < 运行参数 < mode.SetMode()）
+# 开发模式。支持模式：debug、test、release（模式优先级：环境变量 < 配置文件 < 运行参数）
 mode = "debug"
 # 统一时区设置。项目中的时间获取请使用xtime.Now()
 timezone = "Local"
@@ -31,19 +31,21 @@ shutdownMaxWaitTime = "0s"
     # key前缀
     prefix = "due"
 
-[registry.etcd]
-    # 客户端连接地址，默认为["127.0.0.1:2379"]
-    addrs = ["127.0.0.1:2379"]
-    # 客户端拨号超时时间，支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为5s
-    dialTimeout = "5s"
-    # 命名空间，默认为services
-    namespace = "services"
-    # 超时时间，支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为3s
-    timeout = "3s"
-    # 心跳重试次数，默认为3
-    retryTimes = 3
-    # 心跳重试间隔，支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为10s
-    retryInterval = "10s"
+[registry.consul]
+    # 客户端连接地址，默认为127.0.0.1:8500
+    addr = "127.0.0.1:8500"
+    # 是否启用健康检查，默认为true
+    healthCheck = true
+    # 健康检查时间间隔（秒），仅在启用健康检查后生效，默认为10
+    healthCheckInterval = 10
+    # 健康检查超时时间（秒），仅在启用健康检查后生效，默认为5
+    healthCheckTimeout = 5
+    # 是否启用心跳检查，默认为true
+    heartbeatCheck = true
+    # 心跳检查时间间隔（秒），仅在启用心跳检查后生效，默认为10
+    heartbeatCheckInterval = 10
+    # 健康检测失败后自动注销服务时间（秒），默认为30
+    deregisterCriticalServiceAfter = 30
 
 [network.ws.server]
     # 服务器监听地址
@@ -76,8 +78,6 @@ shutdownMaxWaitTime = "0s"
     seqBytes = 0
     # 消息字节数，默认为5000字节
     bufferBytes = 100000
-    # 是否携带服务器心跳时间
-    heartbeatTime = true
 
 [log]
     # 日志输出文件
