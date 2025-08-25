@@ -1,4 +1,4 @@
-module due-examples
+module github.com/dobyte/due-examples
 
 go 1.23.0
 
@@ -17,7 +17,7 @@ require (
 	github.com/dobyte/due/registry/nacos/v2 v2.0.0-20250417030418-e72e9f488a6c
 	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20250417030418-e72e9f488a6c
 	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20250417030418-e72e9f488a6c
-	github.com/dobyte/due/v2 v2.2.6
+	github.com/dobyte/due/v2 v2.3.0
 	github.com/smallnest/rpcx v1.9.1
 	google.golang.org/grpc v1.71.1
 	google.golang.org/protobuf v1.36.6
@@ -125,8 +125,6 @@ require (
 	github.com/klauspost/compress v1.18.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.10 // indirect
 	github.com/klauspost/reedsolomon v1.12.4 // indirect
-	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible // indirect
-	github.com/lestrrat-go/strftime v1.1.0 // indirect
 	github.com/libp2p/go-sockaddr v0.2.0 // indirect
 	github.com/mailru/easyjson v0.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.14 // indirect

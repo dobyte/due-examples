@@ -1,7 +1,7 @@
 package client
 
 import (
-	"due-examples/cluster/service/rpcx/internal/service/greeter/pb"
+	"github.com/dobyte/due-examples/cluster/service/rpcx/internal/service/greeter/pb"
 	"github.com/dobyte/due/v2/transport"
 	"github.com/smallnest/rpcx/client"
 )

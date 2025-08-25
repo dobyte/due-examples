@@ -1,7 +1,7 @@
 package client
 
 import (
-	"due-examples/cluster/service/grpc/internal/service/greeter/pb"
+	"github.com/dobyte/due-examples/cluster/service/grpc/internal/service/greeter/pb"
 	"github.com/dobyte/due/v2/transport"
 	"google.golang.org/grpc"
 )

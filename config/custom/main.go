@@ -2,7 +2,8 @@ package main
 
 import (
 	"context"
-	"due-examples/config/custom/zookeeper"
+
+	"github.com/dobyte/due-examples/config/custom/zookeeper"
 	"github.com/dobyte/due/v2/config"
 	"github.com/dobyte/due/v2/log"
 )

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"due-examples/cluster/service/grpc/internal/service/greeter/server"
+	"github.com/dobyte/due-examples/cluster/service/grpc/internal/service/greeter/server"
 	"github.com/dobyte/due/locate/redis/v2"
 	"github.com/dobyte/due/registry/consul/v2"
 	"github.com/dobyte/due/transport/grpc/v2"

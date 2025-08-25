@@ -13,20 +13,21 @@ import (
 func main() {
 	// 设置锁制造商
 	lock.SetMaker(redis.NewMaker())
-	// 制造锁头
-	locker := lock.Make("lock")
-	// ctx
-	ctx := context.Background()
-	// 计数器
-	total := 0
 
-	wg := &sync.WaitGroup{}
+	var (
+		wg    sync.WaitGroup
+		ctx   = context.Background()
+		total int
+	)
+
 	wg.Add(100)
 
 	startTime := time.Now().UnixNano()
 
 	for range 100 {
 		go func() {
+			locker := lock.Make("lock")
+
 			if err := locker.Acquire(ctx); err != nil {
 				return
 			}

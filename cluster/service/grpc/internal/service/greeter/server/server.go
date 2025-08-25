@@ -2,7 +2,8 @@ package server
 
 import (
 	"context"
-	pb2 "due-examples/cluster/service/grpc/internal/service/greeter/pb"
+
+	pb2 "github.com/dobyte/due-examples/cluster/service/grpc/internal/service/greeter/pb"
 	"github.com/dobyte/due/v2/cluster/mesh"
 )
 

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"due-examples/cluster/service/rpcx/internal/service/greeter/client"
-	"due-examples/cluster/service/rpcx/internal/service/greeter/pb"
+	"github.com/dobyte/due-examples/cluster/service/rpcx/internal/service/greeter/client"
+	"github.com/dobyte/due-examples/cluster/service/rpcx/internal/service/greeter/pb"
 	"github.com/dobyte/due/locate/redis/v2"
 	"github.com/dobyte/due/registry/consul/v2"
 	"github.com/dobyte/due/transport/rpcx/v2"

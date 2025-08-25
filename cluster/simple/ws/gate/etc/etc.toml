@@ -66,6 +66,8 @@ shutdownMaxWaitTime = "0s"
     heartbeatMechanism = "resp"
     # 下行心跳是否携带服务器时间，默认为true
     heartbeatWithServerTime = true
+    # 授权超时时间，（在客户端建立连接后，如果在授权超时时间内未进行绑定用户操作，则被认定为未授权连接，服务器会强制断开连接）支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为0s，不进行授权检测
+    authorizeTimeout = "0s"
 
 [packet]
     # 字节序，默认为big。可选：little | big
