@@ -1,0 +1,276 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        // 简单的Websocket集群
+        {
+            "name": "cluster:simple:ws:gate",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/simple/ws/gate/main.go",
+            "cwd": "${workspaceFolder}/cluster/simple/ws/gate/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:simple:ws:node",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/simple/ws/node/main.go",
+            "cwd": "${workspaceFolder}/cluster/simple/ws/node/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:simple:ws:client",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/simple/ws/client/main.go",
+            "cwd": "${workspaceFolder}/cluster/simple/ws/client/",
+            "env": {},
+            "args": []
+        },
+
+        // 简单的TCP集群
+        {
+            "name": "cluster:simple:tcp:gate",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/simple/tcp/gate/main.go",
+            "cwd": "${workspaceFolder}/cluster/simple/tcp/gate/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:simple:tcp:node",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/simple/tcp/node/main.go",
+            "cwd": "${workspaceFolder}/cluster/simple/tcp/node/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:simple:tcp:client",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/simple/tcp/client/main.go",
+            "cwd": "${workspaceFolder}/cluster/simple/tcp/client/",
+            "env": {},
+            "args": []
+        },
+
+        // 简单的Web集群
+        {
+            "name": "cluster:simple:web:server",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/simple/web/server/main.go",
+            "cwd": "${workspaceFolder}/cluster/simple/web/server/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:simple:web:client",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/simple/web/client/main.go",
+            "cwd": "${workspaceFolder}/cluster/simple/web/client/",
+            "env": {},
+            "args": []
+        },
+
+        // Websocket集群示例：订阅频道/取消订阅/发布频道消息
+        {
+            "name": "cluster:channel:ws:gate",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/channel/ws/gate/main.go",
+            "cwd": "${workspaceFolder}/cluster/channel/ws/gate/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:channel:ws:node",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/channel/ws/node/main.go",
+            "cwd": "${workspaceFolder}/cluster/channel/ws/node/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:channel:ws:client",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/channel/ws/client/main.go",
+            "cwd": "${workspaceFolder}/cluster/channel/ws/client/",
+            "env": {},
+            "args": []
+        },
+
+        // TCP集群示例：订阅频道/取消订阅/发布频道消息
+        {
+            "name": "cluster:channel:tcp:gate",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/channel/tcp/gate/main.go",
+            "cwd": "${workspaceFolder}/cluster/channel/tcp/gate/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:channel:tcp:node",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/channel/tcp/node/main.go",
+            "cwd": "${workspaceFolder}/cluster/channel/tcp/node/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:channel:tcp:client",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/channel/tcp/client/main.go",
+            "cwd": "${workspaceFolder}/cluster/channel/tcp/client/",
+            "env": {},
+            "args": []
+        },
+
+        // GRPC微服务示例:
+        {
+            "name": "cluster:service:grpc:gate",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/service/grpc/gate/main.go",
+            "cwd": "${workspaceFolder}/cluster/service/grpc/gate/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:service:grpc:mesh",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/service/grpc/mesh/main.go",
+            "cwd": "${workspaceFolder}/cluster/service/grpc/mesh/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:service:grpc:node",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/service/grpc/node/main.go",
+            "cwd": "${workspaceFolder}/cluster/service/grpc/node/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:service:grpc:client",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/service/grpc/client/main.go",
+            "cwd": "${workspaceFolder}/cluster/service/grpc/client/",
+            "env": {},
+            "args": []
+        },
+
+        // RPCX微服务示例:
+        {
+            "name": "cluster:service:rpcx:gate",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/service/rpcx/gate/main.go",
+            "cwd": "${workspaceFolder}/cluster/service/rpcx/gate/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:service:rpcx:mesh",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/service/rpcx/mesh/main.go",
+            "cwd": "${workspaceFolder}/cluster/service/rpcx/mesh/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:service:rpcx:node",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/service/rpcx/node/main.go",
+            "cwd": "${workspaceFolder}/cluster/service/rpcx/node/",
+            "env": {},
+            "args": []
+        },
+        {
+            "name": "cluster:service:rpcx:client",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cluster/service/rpcx/client/main.go",
+            "cwd": "${workspaceFolder}/cluster/service/rpcx/client/",
+            "env": {},
+            "args": []
+        },
+
+        // 分布式锁：redis锁
+        {
+            "name": "lock:redis",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/lock/redis/main.go",
+            "cwd": "${workspaceFolder}/lock/redis/",
+            "env": {},
+            "args": []
+        },
+        // 分布式锁：memcache锁
+        {
+            "name": "lock:memcache",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/lock/memcache/main.go",
+            "cwd": "${workspaceFolder}/lock/memcache/",
+            "env": {},
+            "args": []
+        },
+
+        // 日志: 
+        {
+            "name": "log:simple",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/log/simple/main.go",
+            "cwd": "${workspaceFolder}/log/simple/",
+            "env": {},
+            "args": []
+        }
+    ]
+}

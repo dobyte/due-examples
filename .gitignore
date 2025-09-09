@@ -8,7 +8,6 @@ docker/*/
 *.log
 
 # Develop tools
-.vscode
 .idea/
 
 # Project run dir

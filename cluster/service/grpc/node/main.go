@@ -1,6 +1,8 @@
 package main
 
 import (
+	"context"
+
 	"github.com/dobyte/due-examples/cluster/service/grpc/internal/service/greeter/client"
 	"github.com/dobyte/due-examples/cluster/service/grpc/internal/service/greeter/pb"
 	"github.com/dobyte/due/locate/redis/v2"
@@ -10,6 +12,7 @@ import (
 	"github.com/dobyte/due/v2/cluster/node"
 	"github.com/dobyte/due/v2/codes"
 	"github.com/dobyte/due/v2/log"
+	ggrpc "google.golang.org/grpc"
 )
 
 // 路由号
@@ -23,7 +26,7 @@ func main() {
 	// 创建服务发现
 	registry := consul.NewRegistry()
 	// 创建RPC传输器
-	transporter := grpc.NewTransporter()
+	transporter := grpc.NewTransporter(grpc.WithClientDialOptions(ggrpc.WithChainUnaryInterceptor(clientInterceptor)))
 	// 创建节点组件
 	component := node.NewNode(
 		node.WithLocator(locator),
@@ -36,6 +39,13 @@ func main() {
 	container.Add(component)
 	// 启动容器
 	container.Serve()
+}
+
+// 客户端拦截器
+func clientInterceptor(ctx context.Context, method string, req, reply any, cc *ggrpc.ClientConn, invoker ggrpc.UnaryInvoker, opts ...ggrpc.CallOption) error {
+	log.Debug("client interceptor")
+
+	return invoker(ctx, method, req, reply, cc, opts...)
 }
 
 // 初始化应用

@@ -3,21 +3,21 @@ module github.com/dobyte/due-examples
 go 1.23.0
 
 require (
-	github.com/dobyte/due/component/http/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/config/consul/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/config/etcd/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/config/nacos/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/locate/redis/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/lock/memcache/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/lock/redis/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/network/tcp/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/network/ws/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/registry/consul/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/registry/nacos/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20250829074207-e9d6c5b4c493
-	github.com/dobyte/due/v2 v2.3.0
+	github.com/dobyte/due/component/http/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/config/consul/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/config/etcd/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/config/nacos/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/locate/redis/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/lock/memcache/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/lock/redis/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/network/tcp/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/network/ws/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/registry/consul/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/registry/nacos/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20250906071627-93262b5d1065
+	github.com/dobyte/due/v2 v2.3.2
 	github.com/smallnest/rpcx v1.9.1
 	google.golang.org/grpc v1.71.1
 	google.golang.org/protobuf v1.36.6
@@ -54,13 +54,14 @@ require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/bradfitz/gomemcache v0.0.0-20250403215159-8d39553ac7cf // indirect
 	github.com/buger/jsonparser v1.1.1 // indirect
-	github.com/bytedance/sonic v1.13.2 // indirect
-	github.com/bytedance/sonic/loader v0.2.4 // indirect
+	github.com/bytedance/gopkg v0.1.3 // indirect
+	github.com/bytedance/sonic v1.14.1 // indirect
+	github.com/bytedance/sonic/loader v0.3.0 // indirect
 	github.com/cenk/backoff v2.2.1+incompatible // indirect
 	github.com/cenkalti/backoff v2.2.1+incompatible // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/clbanning/mxj/v2 v2.7.0 // indirect
-	github.com/cloudwego/base64x v0.1.5 // indirect
+	github.com/cloudwego/base64x v0.1.6 // indirect
 	github.com/coreos/go-semver v0.3.1 // indirect
 	github.com/coreos/go-systemd/v22 v22.5.0 // indirect
 	github.com/deckarep/golang-set v1.8.0 // indirect
