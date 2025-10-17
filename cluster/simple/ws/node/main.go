@@ -40,7 +40,7 @@ func initApp(proxy *node.Proxy) {
 	proxy.Router().Group(func(group *node.RouterGroup) {
 		group.Middleware(Auth)
 
-		group.AddRouteHandler(greet, false, greetHandler)
+		group.AddRouteHandler(greet, greetHandler)
 	})
 }
 

@@ -3,21 +3,21 @@ module github.com/dobyte/due-examples
 go 1.23.0
 
 require (
-	github.com/dobyte/due/component/http/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/config/consul/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/config/etcd/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/config/nacos/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/locate/redis/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/lock/memcache/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/lock/redis/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/network/tcp/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/network/ws/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/registry/consul/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/registry/nacos/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20250906071627-93262b5d1065
-	github.com/dobyte/due/v2 v2.3.2
+	github.com/dobyte/due/component/http/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/config/consul/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/config/etcd/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/config/nacos/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/locate/redis/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/lock/memcache/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/lock/redis/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/network/tcp/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/network/ws/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/registry/consul/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/registry/etcd/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/registry/nacos/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/transport/grpc/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/transport/rpcx/v2 v2.0.0-20251016122418-5c942a2996f0
+	github.com/dobyte/due/v2 v2.4.1
 	github.com/smallnest/rpcx v1.9.1
 	google.golang.org/grpc v1.71.1
 	google.golang.org/protobuf v1.36.6

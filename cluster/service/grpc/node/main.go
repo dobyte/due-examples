@@ -50,7 +50,7 @@ func clientInterceptor(ctx context.Context, method string, req, reply any, cc *g
 
 // 初始化应用
 func initAPP(proxy *node.Proxy) {
-	proxy.Router().AddRouteHandler(hello, false, helloHandler)
+	proxy.Router().AddRouteHandler(hello, helloHandler)
 }
 
 // 请求

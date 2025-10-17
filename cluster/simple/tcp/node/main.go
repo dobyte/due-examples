@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/dobyte/due/locate/redis/v2"
 	"github.com/dobyte/due/registry/consul/v2"
 	"github.com/dobyte/due/v2"
@@ -36,7 +37,7 @@ func main() {
 
 // 初始化应用
 func initApp(proxy *node.Proxy) {
-	proxy.Router().AddRouteHandler(greet, false, greetHandler)
+	proxy.Router().AddRouteHandler(greet, greetHandler)
 }
 
 // 请求

@@ -40,7 +40,7 @@ func main() {
 
 // 初始化应用
 func initAPP(proxy *node.Proxy) {
-	proxy.Router().AddRouteHandler(hello, false, helloHandler)
+	proxy.Router().AddRouteHandler(hello, helloHandler)
 }
 
 // 请求
